@@ -1,0 +1,111 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = jokesandjokes
+build_property.RootNamespace = jokesandjokes
+build_property.ProjectDir = C:\coding_projects\TheDestroyerASP\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\coding_projects\TheDestroyerASP
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/coding_projects/TheDestroyerASP/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Jokes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Jokes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Jokes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Jokes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Jokes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Jokes/ShowSearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcU2hvd1NlYXJjaEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Monsters/Attack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uc3RlcnNcQXR0YWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Monsters/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uc3RlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Monsters/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uc3RlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Monsters/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uc3RlcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Monsters/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uc3RlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Monsters/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uc3RlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/coding_projects/TheDestroyerASP/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9qxmjmatm6

@@ -1,0 +1,111 @@
+﻿@model jokesandjokes.Models.Monster
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Monster</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OuterRed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OuterRed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OuterGreen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OuterGreen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OuterBlue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OuterBlue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InnerRed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InnerRed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InnerGreen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InnerGreen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InnerBlue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InnerBlue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TopRoundness)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TopRoundness)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BottomRoundness)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BottomRoundness)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Width)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Width)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MouthWidth)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MouthWidth)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EyeHeight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EyeHeight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EyeNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EyeNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.alive)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.alive)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

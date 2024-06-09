@@ -1,0 +1,601 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* body{
+    overflow: hidden;
+} */
+
+.contentContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: hotpink;
+}
+
+.adjustmentTab {
+    background-color: rgb(255, 255, 255);
+    border: black solid 2px;
+    text-align: center;
+    height: 100%;
+}
+
+.lable {
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    width: fit-content;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-weight: bolder;
+}
+
+.creationPage {
+    height: 100%;
+}
+
+.displaySection {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+.invisibleP {
+    display: none;
+}
+
+.adjustmentTab input, select {
+    width: 100%;
+    margin: auto;
+}
+
+input[type=range].innerRed, .outerRed {
+    height: 10px;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    margin: auto;
+    width: 100%;
+    background-color: rgb(255, 53, 87);
+    color: rgb(51, 21, 21);
+}
+
+input[type=range].innerGreen, .outerGreen {
+    height: 10px;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    margin: auto;
+    width: 100%;
+    background-color: rgb(8, 114, 49);
+    color: rgb(51, 21, 21);
+}
+
+input[type=range].innerBlue, .outerBlue {
+    height: 10px;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    margin: auto;
+    width: 100%;
+    background-color: rgb(53, 181, 255);
+    color: rgb(51, 21, 21);
+}
+
+
+
+input[type=range].innerRed, .outerRed ::moz-range-thumb {
+    height: 15px;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    margin: auto;
+    width: 100%;
+    background-color: rgb(110, 69, 76);
+    color: rgb(51, 21, 21);
+}
+
+input[type=range].innerGreen, .outerGreen ::moz-range-thumb {
+    height: 15px;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    margin: auto;
+    width: 100%;
+    background-color: rgb(37, 107, 37);
+    color: rgb(51, 21, 21);
+}
+
+input[type=range].innerBlue, .outerBlue ::moz-range-thumb {
+    height: 15px;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    margin: auto;
+    width: 100%;
+    background-color: rgb(75, 69, 110);
+    color: rgb(51, 21, 21);
+}
+
+.monsterBody {
+    margin: auto;
+    height: 50%;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    border-radius: 50% 50% 20% 20%;
+    background-image: radial-gradient(rgb(100,0,250) 30%, rgb(0,250,40));
+}
+
+.monsterMouth {
+    background-color: black;
+    height: 10%;
+    width: 80%;
+    margin: auto;
+    border-radius: 99999px;
+    display: flex;
+    position: relative;
+    margin: auto;
+    top: 65%;
+    overflow: hidden;
+}
+
+.topRow {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    height: 40%;
+}
+
+.bottomRow {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 100%;
+    display: flex;
+}
+
+.teeth {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgb(248, 247, 247);
+    margin: auto;
+}
+
+.teethB {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(248, 247, 247);
+    margin: auto;
+    bottom: 100%;
+}
+
+.tentacles {
+    width: 100;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    top: 75%;
+}
+
+.tentaclesBack {
+    width: 100;
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    top: 80%;
+}
+
+
+
+.tentacleRoot {
+    padding-top: 20%;
+    width: 20%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    background-image: radial-gradient(rgb(100,0,250) 30%, rgb(0,250,40));
+    border-radius: 50%;
+    display: flex;
+}
+
+.tentacleRoot2 {
+    padding-top: 20%;
+    width: 20%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    background-image: radial-gradient(rgb(100,0,250) 30%, rgb(0,250,40));
+    border-radius: 50%;
+}
+
+.tentacleRoot .tentaclePart {
+    width: 80%;
+    height: 80%;
+    background-image: radial-gradient(rgb(100,0,250) 30%, rgb(0,250,40));
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: -20%;
+    z-index: 1;
+    margin: auto;
+}
+
+.tentacleRoot2 .tentaclePart {
+    width: 80%;
+    height: 80%;
+    background-image: radial-gradient(rgb(100,0,250) 30%, rgb(0,250,40));
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    right: -20%;
+    z-index: 1;
+    margin: auto;
+}
+
+.monsterEyerow {
+    width: 100%;
+    display: flex;
+    height: 10%;
+    position: relative;
+    top: 40%;
+}
+
+.eye {
+    position: relative;
+    margin: auto;
+    padding-top: 10%;
+    width: 10%;
+    height: auto;
+    border-radius: 50%;
+    background-color: rgb(236, 217, 217);
+}
+
+.iris {
+    height: 10%;
+    width: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.monsterDisplay {
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    animation: floatMonster 5s linear infinite;
+}
+
+.creatureContainer {
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    position: absolute;
+    left: 37%;
+    z-index: 3;
+    top: 20%;
+    animation: monsterAppear .5s both;
+    transform-origin: center;
+}
+
+@keyframes monsterAppear {
+    0% {
+        transform: scale(.2)translateX(-20%)
+    }
+
+    100% {
+        transform: scale(1)translateX(0%)
+    }
+}
+
+@keyframes floatMonster {
+    0% {
+        transform: translateX(0%)translateY(0%)
+    }
+
+    12% {
+        transform: translateX(-5%)translateY(2%)
+    }
+
+    25% {
+        transform: translateX(-10%)translateY(5%)
+    }
+
+    37% {
+        transform: translateX(-15%)translateY(2%)
+    }
+
+    50% {
+        transform: translateX(-20%)translateY(0%)
+    }
+
+    67% {
+        transform: translateX(-15%)translateY(2%)
+    }
+
+    75% {
+        transform: translateX(-10%)translateY(5%)
+    }
+
+    90% {
+        transform: translateX(-5%)translateY(2%)
+    }
+
+    100% {
+        transform: translateX(0%)translateY(0%)
+    }
+}
+
+.monsterNameDisplay {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 80%;
+    height: 10%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom:1%;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.nameLetter {
+    height: 100%;
+    padding: 1%;
+    float: left;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.attackButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1%;
+    background-color: aqua;
+    border-radius: 3px;
+    z-index: 3;
+}
+
+@keyframes turn {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(180deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.globe {
+    overflow: hidden;
+    position: relative;
+    top: 15%;
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: rgb(52, 52, 197);
+    animation: turn 5s linear infinite
+}
+
+.landpiece {
+    position: absolute;
+    background-color: rgb(80, 46, 22)
+}
+
+.cloud {
+    position: absolute;
+    background-color: rgba(195, 228, 236, 0.205)
+}
+
+.gateParent {
+    position: relative;
+    margin: auto;
+    top: 10%;
+    height: 400px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: cornsilk;
+    animation: gateopen 1s both;
+    z-index: 1;
+}
+
+@keyframes gateopen {
+    0% {
+        transform: scaleY(.01)scaleX(.01)
+    }
+
+    50% {
+        transform: scaleY(1)scaleX(.01)
+    }
+
+    100% {
+        transform: scaleX(1)
+    }
+}
+
+.gatepiece {
+    border-radius: 50%;
+    height: 95%;
+    width: 95%;
+    margin: auto;
+    position: relative;
+    top: 2.5%;
+}
+
+
+
+
+.createButton {
+    position: fixed;
+    bottom: 20px;
+    right: 100px;
+    padding: 1%;
+    background-color: aqua;
+    border-radius: 3px;
+    z-index: 3;
+}
+
+.battlePage {
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.beam {
+    position: absolute;
+    transform-origin: bottom;
+    width: 2px;
+    animation: beam 2s both;
+    top: 101%;
+}
+
+@keyframes beam {
+    0% {
+        height: 1%
+    }
+
+    50% {
+        height: 300%;
+        transform: scaleY(1)
+    }
+
+    100% {
+        transform: scaleY(0 )
+    }
+}
+
+.explosion {
+    position: absolute;
+    background-color: rgb(255, 234, 148);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transform-origin: center;
+    animation: explode .5s both;
+    z-index: 3
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(.1);
+        opacity: 100%;
+    }
+
+    50% {
+        transform: scale(.5);
+        opacity: 50%;
+    }
+
+    99% {
+        transform: scale(1);
+        opacity: 50%;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 50%;
+    }
+}
+
+.star {
+    position: absolute;
+    background-color: cornsilk;
+    animation: star 1s infinite;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+@keyframes star {
+    0% {
+        height: 2px;
+        width: 2px;
+    }
+
+    100% {
+        height: 1px;
+        width: 1px;
+    }
+}
+
+.title {
+    position: relative;
+    background-color: beige;
+    top: 2%;
+    width: fit-content;
+    height: 10%;
+    padding: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    margin: auto;
+}
+
+
+footer {
+    transform: translateY(100%);
+}
+.monsterDisplayOdd{
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    animation: floatMonster 5s linear infinite;
+    animation-delay: .3s;
+}
+
+.container{
+    margin:0 !important;
+    padding: 0 !important;
+}
+
+
+/* .tentackleRoot2> .tentaclePart{
+    padding-top:80%;
+    width:80%;
+    height:auto;
+    background-image:radial-gradient(rgb(100,0,250) 30% , rgb(0,250,40)); 
+    border-radius: 50%;
+    position:relative;
+    top:20%;
+    left:20%
+    
+  } */
+
+
+/* <div class = "creatureBody" id = '.$post->post_title.' value = "'.$post->post_content.'"  style = "position:absolute; height:'.$height.'%; width:'.$width.'%; background-image:radial-gradient(rgb('.$outerred. ','  .$outergreen. ','  .$outerblue.') 30% , rgb('.$innerred. ','  .$innergreen. ','  .$innerblue .')  */

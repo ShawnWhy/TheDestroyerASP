@@ -1,0 +1,299 @@
+﻿@model jokesandjokes.Models.Monster
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Monster</h4>
+<hr />
+<div class="choiceContainer" style="width:25% ! important; float:left">
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control nameInput" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OuterRed" class="control-label"></label>
+                <input asp-for="OuterRed" type="range" class="form-control outerRed" min="0" max="250"/>
+                <span asp-validation-for="OuterRed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OuterGreen" class="control-label"></label>
+                <input asp-for="OuterGreen" type="range" class="form-control outerGreen" min="0" max="250" />
+                <span asp-validation-for="OuterGreen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OuterBlue" class="control-label"></label>
+                <input asp-for="OuterBlue" type="range" class="form-control outerBlue" min="0" max="250" />
+                <span asp-validation-for="OuterBlue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InnerRed" class="control-label"></label>
+                <input asp-for="InnerRed" type="range" class="form-control innerRed" min="0" max="250" />
+                <span asp-validation-for="InnerRed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InnerGreen" class="control-label"></label>
+                <input asp-for="InnerGreen" type="range" class="form-control innerGreen" min="0" max="250" />
+                <span asp-validation-for="InnerGreen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InnerBlue" class="control-label"></label>
+                <input asp-for="InnerBlue" type="range" class="form-control innerBlue" min="0" max="250" />
+                <span asp-validation-for="InnerBlue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TopRoundness" class="control-label"></label>
+                <input asp-for="TopRoundness" type="range" class="form-control topRoundness" min="0" max="50" />
+                <span asp-validation-for="TopRoundness" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BottomRoundness" class="control-label"></label>
+                <input asp-for="BottomRoundness" type="range" class="form-control bottomRoundness" min="0" max="50" />
+                <span asp-validation-for="BottomRoundness" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Height" class="control-label"></label>
+                <input asp-for="Height" type="range" class="form-control height" min="20" max="100" />
+                <span asp-validation-for="Height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Width" class="control-label"></label>
+                    <input asp-for="Width" type="range" class="form-control width" min="20" max="100" />
+                <span asp-validation-for="Width" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MouthWidth" class="control-label"></label>
+                    <input asp-for="MouthWidth" type="range" class="form-control mouthWidth" min="0" max="80" />
+                <span asp-validation-for="MouthWidth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EyeHeight" class="control-label"></label>
+                    <input asp-for="EyeHeight" type="range" class="form-control eyeHeight" min="20" max="50" />
+                <span asp-validation-for="EyeHeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EyeNumber" class="control-label"></label>
+                    <input asp-for="EyeNumber" type="range" class="form-control eyeNumber" min="0" max="8" />
+                <span asp-validation-for="EyeNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="alive" /> @Html.DisplayNameFor(model => model.alive)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+</div>
+
+<div class="col-md-9 displaySection" style="position:absolute; left:25%; width:75%; height:100%; float:left">
+
+    <div class="monsterNameDisplay">
+    </div>
+
+    <div class="monsterDisplay">
+
+        <div class="monsterBody">
+            <div class="monsterEyerow">
+                <div class="eye"><div class="iris"></div></div>
+                <div class="eye"><div class="iris"></div></div>
+                <div class="eye"><div class="iris"></div></div>
+                <div class="eye"><div class="iris"></div></div>
+                <div class="eye"><div class="iris"></div></div>
+                <div class="eye"><div class="iris"></div></div>
+
+            </div>
+            <div class="monsterMouth">
+                <div class="topRow">
+                    <div class="teeth"></div>
+                    <div class="teeth"></div>
+                    <div class="teeth"></div>
+                    <div class="teeth"></div>
+                    <div class="teeth"></div>
+                    <div class="teeth"></div>
+                </div>
+
+                <div class="bottomRow">
+                    <div class="teethB"></div>
+                    <div class="teethB"></div>
+                    <div class="teethB"></div>
+                    <div class="teethB"></div>
+                    <div class="teethB"></div>
+                    <div class="teethB"></div>
+                </div>
+            </div>
+            <div class="tentacles">
+
+                <div class="tentacleRoot">
+                    <div class="tentaclePart">
+                        <div class="tentaclePart">
+                            <div class="tentaclePart">
+                                <div class="tentaclePart">
+                                    <div class="tentaclePart">
+                                        <div class="tentaclePart">
+                                            <div class="tentaclePart">
+                                                <div class="tentaclePart">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tentacleRoot">
+                    <div class="tentaclePart">
+                        <div class="tentaclePart">
+                            <div class="tentaclePart">
+                                <div class="tentaclePart">
+                                    <div class="tentaclePart">
+                                        <div class="tentaclePart">
+                                            <div class="tentaclePart">
+                                                <div class="tentaclePart">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tentacleRoot2">
+                    <div class="tentaclePart">
+                        <div class="tentaclePart">
+                            <div class="tentaclePart">
+                                <div class="tentaclePart">
+                                    <div class="tentaclePart">
+                                        <div class="tentaclePart">
+                                            <div class="tentaclePart">
+                                                <div class="tentaclePart">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tentacleRoot2">
+                    <div class="tentaclePart">
+                        <div class="tentaclePart">
+                            <div class="tentaclePart">
+                                <div class="tentaclePart">
+                                    <div class="tentaclePart">
+                                        <div class="tentaclePart">
+                                            <div class="tentaclePart">
+                                                <div class="tentaclePart">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tentaclesBack">
+
+                <div class="tentacleRoot">
+                    <div class="tentaclePart">
+                        <div class="tentaclePart">
+                            <div class="tentaclePart">
+                                <div class="tentaclePart">
+                                    <div class="tentaclePart">
+                                        <div class="tentaclePart">
+                                            <div class="tentaclePart">
+                                                <div class="tentaclePart">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tentacleRoot">
+                    <div class="tentaclePart">
+                        <div class="tentaclePart">
+                            <div class="tentaclePart">
+                                <div class="tentaclePart">
+                                    <div class="tentaclePart">
+                                        <div class="tentaclePart">
+                                            <div class="tentaclePart">
+                                                <div class="tentaclePart">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tentacleRoot">
+                    <div class="tentaclePart">
+                        <div class="tentaclePart">
+                            <div class="tentaclePart">
+                                <div class="tentaclePart">
+                                    <div class="tentaclePart">
+                                        <div class="tentaclePart">
+                                            <div class="tentaclePart">
+                                                <div class="tentaclePart">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tentacleRoot">
+                    <div class="tentaclePart">
+                        <div class="tentaclePart">
+                            <div class="tentaclePart">
+                                <div class="tentaclePart">
+                                    <div class="tentaclePart">
+                                        <div class="tentaclePart">
+                                            <div class="tentaclePart">
+                                                <div class="tentaclePart">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
