@@ -181,15 +181,19 @@ setTimeout(() => {
 }, 2000);
 function planeExplode(plane){
     //get the position of the plane
+    console.log("planeExplode")
     var planePos = plane.position();
-    var planeX = planePos.X;
-    var planeY = planePos.Y;
+    console.log(planePos);
+    var planeY = planePos.top;
+    var planeX = planePos.left;
     //create explosion
     var explosion = $("<div>");
-    explosion.addClass("explosion");
-    explosion.css("top", planeY);
-    explosion.css("left", planeX);
+    explosion.addClass("explosionBig");
+    explosion.css("top", planeY-50);
+    explosion.css("left", planeX-50);
+    plane.remove();
     $(".battlePage").append(explosion);
+    explosionBig(planePos);
 }
 
 function createMissle(){
@@ -226,44 +230,29 @@ function monsterExplode(){
     var monsterX = monsterPos.left;
     var monsterY = monsterPos.top;
     var explosion = $("<div>");
-    explosion.addClass("explosion");
-    explosion.css("top", monsterY);
-    explosion.css("left", monsterX);
-    $(".battlePage").append(explosion);
-}
-
-function addSmallExplosion(item){
-    var explosion = $("<div>");
-    explosion.addClass("explosion");
-    //add random size to the explosion
-    var size = Math.random()*100+50;
-    //add a tandom explosion class with a random number at the end
-    var rand = Math.floor(Math.random()*4);
-    explosion.addClass("explosion"+rand);
-
-    explosion.css("width", size+"px");
-    explosion.css("height", size+"px");
-    explosion.css("top", (Math.random()*200-100)+"px"+item.position().top);
-    explosion.css("left", (Math.random()*200-100)+"px"+item.position().left);
+    explosion.addClass("explosionBig");
+    explosion.css("top", monsterY+monster.height()/2)
+    explosion.css("left", monsterX+monster.height()/2);
     $(".battlePage").append(explosion);
 }
 
 function addReduceHealth(){
+    console.log("addressing health")
     var health = $(".planethealth");
     var healthVal = parseInt(health.text());
     var earth = $(".globe");
     //get absolutel locatin of earth div accounting for margin 
     //
     var earthPos = earth.position();
-    var earthX = earthPos.x;
-    var earthY = earthPos.y;
+    var earthX = earthPos.left;
+    var earthY = earthPos.top;
     var displayText = $("<div>");
     displayText.addClass("displayText");
     displayText.css('color', 'red');
     displayText.css('position', 'absolute');
     displayText.text("-1");
   
-    displayText.css("top", earthY+earth.height()/2);
+    displayText.css("top", earthY + earth.height()/2);
     displayText.css("left", "50%");
     $(".battlePage").append(displayText);
       setTimeout(() => {
@@ -274,7 +263,7 @@ function addReduceHealth(){
         earthExplode();
     }
     if(healthVal<=0){
-        $(".battlePage").html("<h1>Game Over</h1>")
+        $(".battlePage").html("<h1>Earth is Destroyed in this Universe</h1>")
     
 }
 }
@@ -283,25 +272,44 @@ function addReduceHealth(){
 function earthExplode(){
     var earth = $(".globe");
     console.log(earth)
-    var earthPos = $(earth).position();
+    var earthPos = earth.position();
     console.log(earthPos)
     var earthX = earthPos.left;
     var earthY = earthPos.top;
     var explosion = $("<div>");
-    explosion.addClass("explosion");
+    explosion.addClass("explosionBig");
     explosion.css("top", earthY);
-    explosion.css("left", earthX);
+    explosion.css("left", "50%");
     $(".battlePage").append(explosion);
+    explosionBig({top: earthY, left: $("body").width()/2});
 }
 
 
-$(window).on("click",".plane", (e)=>{
+function explosionBig(position) {
+  for (let i = 0; i < 9; i++) {
+    setTimeout(() => {
+      let top = Math.random() * 280 -140;
+      let left = Math.random() * 280 -140;
+
+      var explosion = $("<div>");
+      explosion.addClass("explosion");
+      explosion.css("top", (position.top+top) + "px");
+      explosion.css("left", (position.left+left) +"px");
+      $(".battlePage").append(explosion);
+    }, i * 50);
+
+  }
+}
+
+$('body').on("click",".plane", (e)=>{
 e.stopPropagation();
 e.preventDefault();
+console.log("plane clicked");
+
 planeExplode($(e.target));
 })
 
-$(window).on("click", ".missle", (e) => {
+$("body").on("click", ".missle", (e) => {
   e.stopPropagation();
   e.preventDefault();
   planeExplode($(e.target));

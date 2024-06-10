@@ -532,3 +532,4 @@ C:\coding_projects\TheDestroyerASP\obj\Debug\net8.0\refint\jokesandjokes.dll
 C:\coding_projects\TheDestroyerASP\obj\Debug\net8.0\jokesandjokes.pdb
 C:\coding_projects\TheDestroyerASP\obj\Debug\net8.0\jokesandjokes.genruntimeconfig.cache
 C:\coding_projects\TheDestroyerASP\obj\Debug\net8.0\ref\jokesandjokes.dll
+C:\coding_projects\TheDestroyerASP\obj\Debug\net8.0\jokesandjokes.sourcelink.json
