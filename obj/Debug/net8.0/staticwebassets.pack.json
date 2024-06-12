@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\js\\attack.js"
     },
     {
+      "Id": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\js\\notes.txt",
+      "PackagePath": "staticwebassets\\js\\notes.txt"
+    },
+    {
       "Id": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5+LxrVcxZs0JdCNE2ClwToZ6SKlJkG8fTil+bGY0Fgo=",
+  "Hash": "uh555nDytAgdsZrcWuoduOGtI8V5NhkgydlFKBngQVY=",
   "Source": "jokesandjokes",
   "BasePath": "_content/jokesandjokes",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\attack.js"
+    },
+    {
+      "Identity": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\js\\notes.txt",
+      "SourceId": "jokesandjokes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\",
+      "BasePath": "_content/jokesandjokes",
+      "RelativePath": "js/notes.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\notes.txt"
     },
     {
       "Identity": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\js\\site.js",

@@ -592,6 +592,7 @@ footer {
     background-color: rgb(255, 255, 255);
     animation:dropDown .5s both;
     overflow: visible;
+    z-index:2;
 }
 .planeTail{
     height:100px;
@@ -686,6 +687,90 @@ footer {
         opacity: 20%;
         background-color: yellow;
     }
+}
+
+.missile{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(135, 221, 236);
+    position: absolute ! important;
+    animation:missile .5s infinite;
+    transform-origin: center;
+    z-index:3;
+
+}
+
+@keyframes missile {
+    0%{
+        transform:scale(60%);
+    }
+    100%{
+        transform:scale(100%);
+    }
+    
+}
+
+.irisShake1{
+    animation: irisShake1 .2s infinite;
+}
+.irisShake2{
+    animation: irisShake2 .2s infinite;
+}
+.monsterMouthShake{
+    animation: monsterMouthShake .2s infinite;
+
+}
+
+@keyframes irisShake1 {
+    0%{
+        top:50%;
+        left:50%;
+    }
+    50%{
+        top:55%;
+        left:55%;
+    }
+    100%{
+        top:50%;
+        left:50%;
+    }
+}
+@keyframes irisShake2 {
+    0%{
+        top:50%;
+        left:50%;
+    }
+    50%{
+        top:45%;
+        left:45%;
+    }
+    100%{
+        top:50%;
+        left:50%;
+    }
+}
+@keyframes monsterMouthShake {
+    0%{
+        tranform:scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        tranform:scale(1)
+    }
+}
+
+.endgame{
+    position: absolute;
+   top:200px;
+   text-align: center;
+    width:100%;
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+
 }
 /* .tentackleRoot2> .tentaclePart{
     padding-top:80%;
