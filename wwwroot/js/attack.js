@@ -164,6 +164,19 @@ function shootMissile(){
 }
 }
 function moveMissile(){
+      var health = $(".creaturehealth");
+      var healthVal = parseInt(health.text());
+        if (healthVal <= 1) {
+          clearInterval(shootmissleInterval);
+          clearInterval(movemissleInterval);
+          clearInterval(createPlaneInterval);
+          $(".missile").remove();
+          $(".battlePage").append(
+            "<h1 class='endgame'>Monster is Destroyed in this Universe</h1>"
+          );
+
+          monsterExplode();
+        }
     var missiles = $('.missile');
     missiles.each((index, element) => {
 //move the missle leftwards by 10px if it halfway to the center of window, explode
@@ -184,7 +197,7 @@ shootmissleInterval = setInterval(() => {
 }, 3000);
 movemissleInterval = setInterval(() => {
     moveMissile()
-}, 100);
+}, 50);
 createPlaneInterval = setInterval(() => {
   createShip();
 }, 5000);
@@ -254,12 +267,14 @@ function monsterExplode(){
     explosion.css("top", monsterY+monster.height()/2)
     explosion.css("left", monsterX+monster.height()/2);
     $(".battlePage").append(explosion);
+    undateMonsterDeathAjax();
     explosionBig({top: monsterY, left: monsterX});
     clearInterval(beaminterval)
     setTimeout(() => {
         explosion.remove();
         $(".creatureContainer").remove();
         $(".explosion").remove();
+       ;
     }, 500);
 }
 
@@ -302,8 +317,8 @@ function addReduceHealth(){
 }
 
 function addReduceHealthMonster() {
-  var health = $(".creaturehealth");
-  var healthVal = parseInt(health.text());
+  let health = $(".creaturehealth");
+  let healthVal = parseInt(health.text());
   var monster = $(".battlePage .monsterBody");
   //get absolutel locatin of earth div accounting for margin
   //
@@ -314,7 +329,9 @@ function addReduceHealthMonster() {
   displayText.addClass("displayText");
   displayText.css("color", "red");
   displayText.css("position", "absolute");
-  displayText.text("-1");
+  health.text(healthVal - 50);
+
+  displayText.text("-10");
 
   displayText.css("top", monsterY + monster.height() / 2);
   displayText.css("left",'50%');
@@ -322,17 +339,7 @@ function addReduceHealthMonster() {
   setTimeout(() => {
     displayText.remove();
   }, 1000);
-  health.text(healthVal - 10);
-  if (healthVal <= 1) {
-    monsterExplode();
-  }
-  if (healthVal <= 0) {
-        clearInterval(shootmissleInterval);
-        clearInterval(movemissleInterval);
-        clearInterval(createPlaneInterval);
-        $(".missile").remove()
-    $(".battlePage").append("<h1 class='endgame'>Monster is Destroyed in this Universe</h1>");
-  }
+
 }
 
 
@@ -347,6 +354,10 @@ function earthExplode(){
     explosion.css("left", "50%");
     $(".battlePage").append(explosion);
     explosionBig({top: earthY, left: $("body").width()/2});
+    setTimeout(() => {
+        explosion.remove();
+        $(".explosion").remove()
+    }, 500);
 }
 
 
@@ -408,10 +419,26 @@ function monsterShake(){
     }, 500);
 }
 
-// function undateMonsterDeathAjax(){
+function undateMonsterDeathAjax(){
+    var id = $(".creaturehealth").attr("data");
+    console.log(id)
+    $.ajax({
+        url: "/Monsters/Death",
+        type: "POST",
+        data: {"id":id},
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+// function getMonstersAjax(){
 //     $.ajax({
-//         url: "/Monster/UpdateMonsterDeath",
-//         type: "POST",
+//         url: "/Monsters/Index",
+//         type: "GET",
 //         success: function (data) {
 //             console.log(data);
 //         },
@@ -420,3 +447,5 @@ function monsterShake(){
 //         }
 //     });
 // }
+
+// getMonstersAjax();

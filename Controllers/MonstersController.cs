@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using jokesandjokes.Data;
 using jokesandjokes.Models;
+using System.Diagnostics;
+using Microsoft.CodeAnalysis.Elfie.Model.Strings;
 
 namespace jokesandjokes.Controllers
 {
@@ -42,6 +44,32 @@ namespace jokesandjokes.Controllers
 
             return View(monster);
         }
+
+ 
+
+
+        // POST: Jokes/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        public async Task<string> Death(int? id)
+        {
+             Debug.WriteLine(id);
+             Debug.WriteLine("DEATH!!!");
+             var monster = await _context.Monster.FindAsync(id);
+            
+             if (monster != null)
+             {
+                 monster.alive = false;
+                 _context.Monster.Update(monster);
+                 _context.SaveChanges();
+             }
+
+            
+            return ("HAHAHAH ITS DONW");
+            
+        }
+
         // GET: Monsters/Attack/5
         public async Task<IActionResult> Attack(int? id)
         {
