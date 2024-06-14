@@ -3,6 +3,261 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">WE Got Jokes!</h1>
-    <p>Learn about our </p>
+    <h1 class="display-4">WELCOME, WELCOM TO THE LAB!</h1>
+    
 </div>
+
+<style>
+    .displaySection {
+        background-color: unset;
+        margin-bottom: 4%;
+        float: left;
+        overflow: visible;
+    }
+
+    body {
+        height: 100%;
+        background: black;
+    }
+
+    .monsterDisplay{
+        position:absolute;
+        animation:unset;
+    }
+    .monsterDead{
+       top:100%;
+    }
+    .monsterDisplay.monsterDead{
+        animation:unset;
+        position:absolute;
+    }
+    .monsterDead .monsterBody{
+            transform: rotate(90deg);
+            position:absolute;
+        }
+
+</style>
+
+
+
+<table class="table">
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            string cssClassMonsterDisplay = item.Id % 2 == 0 ? "monsterDisplay" : "monsterDisplay monsterDisplayOdd";
+            
+
+            //<div class="col-md-9 displaySection" style="height:100px; width:100px">
+
+                @if(item.alive == false)
+                {
+                    cssClassMonsterDisplay += " monsterDead";
+                }
+            
+
+                <div class="@cssClassMonsterDisplay" id = "@item.Id" style="height:300px; width:300px">
+
+                    <div class= "monsterBody" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)); border-radius: @item.TopRoundness% @item.TopRoundness% @item.BottomRoundness% @item.BottomRoundness%; height:@item.Height%;width:@item.Width% ">
+                        <div class="monsterEyerow" style=" top: @item.EyeHeight%">
+
+                            @for (int i = 0; i < item.EyeNumber; i++)
+                            {
+                                <div class="eye">
+                                    @if (item.alive == false)
+                                    {
+                                        <div class="deadEye">X</div>
+                                    }
+                                    else
+                                    {
+                                        <div class="iris"></div>
+                                    }
+                                </div>
+
+                            }
+
+                        </div>
+                        <div class="monsterMouth" style="width: @item.MouthWidth%;">
+                            <div class="topRow">
+                                <div class="teeth"></div>
+                                <div class="teeth"></div>
+                                <div class="teeth"></div>
+                                <div class="teeth"></div>
+                                <div class="teeth"></div>
+                                <div class="teeth"></div>
+                            </div>
+
+                            <div class="bottomRow">
+                                <div class="teethB"></div>
+                                <div class="teethB"></div>
+                                <div class="teethB"></div>
+                                <div class="teethB"></div>
+                                <div class="teethB"></div>
+                                <div class="teethB"></div>
+                            </div>
+                        </div>
+                        <div class="tentacles">
+
+                            <div class="tentacleRoot" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                    <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                        <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                            <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                    <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                        <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                            <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tentacleRoot" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                    <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                        <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                            <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                    <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                        <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                            <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tentacleRoot2" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                    <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                        <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                            <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                    <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                        <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                            <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tentacleRoot2" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                    <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                        <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                            <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                    <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                        <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                            <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tentaclesBack" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+
+                            <div class="tentacleRoot" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                    <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                        <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                            <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                    <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                        <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                            <div class="tentaclePart" style="background-image: radial-gradient(rgb(@item.InnerRed , @item.InnerGreen, @item.InnerBlue )30% , rgb( @item.OuterRed, @item.OuterGreen, @item.OuterBlue)">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tentacleRoot">
+                                <div class="tentaclePart">
+                                    <div class="tentaclePart">
+                                        <div class="tentaclePart">
+                                            <div class="tentaclePart">
+                                                <div class="tentaclePart">
+                                                    <div class="tentaclePart">
+                                                        <div class="tentaclePart">
+                                                            <div class="tentaclePart">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tentacleRoot">
+                                <div class="tentaclePart">
+                                    <div class="tentaclePart">
+                                        <div class="tentaclePart">
+                                            <div class="tentaclePart">
+                                                <div class="tentaclePart">
+                                                    <div class="tentaclePart">
+                                                        <div class="tentaclePart">
+                                                            <div class="tentaclePart">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tentacleRoot">
+                                <div class="tentaclePart">
+                                    <div class="tentaclePart">
+                                        <div class="tentaclePart">
+                                            <div class="tentaclePart">
+                                                <div class="tentaclePart">
+                                                    <div class="tentaclePart">
+                                                        <div class="tentaclePart">
+                                                            <div class="tentaclePart">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            //</div>
+
+
+        }
+    </tbody>
+</table>
+<script src="~/js/homepagezoo.js" asp-append-version="true"></script>
+

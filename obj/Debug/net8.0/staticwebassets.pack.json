@@ -17,12 +17,20 @@
       "PackagePath": "staticwebassets\\js\\attack.js"
     },
     {
+      "Id": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\js\\homepagezoo.js",
+      "PackagePath": "staticwebassets\\js\\homepagezoo.js"
+    },
+    {
       "Id": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\js\\notes.txt",
       "PackagePath": "staticwebassets\\js\\notes.txt"
     },
     {
       "Id": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\js\\testing.html",
+      "PackagePath": "staticwebassets\\js\\testing.html"
     },
     {
       "Id": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\lib\\bootstrap\\LICENSE",

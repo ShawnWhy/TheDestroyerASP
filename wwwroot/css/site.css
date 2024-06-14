@@ -772,6 +772,18 @@ footer {
     color: white;
 
 }
+
+.deadEye {
+    font-size: 30%;
+    height: 10%;
+    text-align: center;
+    width: 10%;
+    position: absolute;
+    top: 0%;
+    left: 15%;
+    font-weight: bolder;
+}
+
 /* .tentackleRoot2> .tentaclePart{
     padding-top:80%;
     width:80%;

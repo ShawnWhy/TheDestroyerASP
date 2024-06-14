@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uh555nDytAgdsZrcWuoduOGtI8V5NhkgydlFKBngQVY=",
+  "Hash": "y+PRKMNqPDZHxP9i+5SEmoJUnff9OH82ZRWs3gETQiI=",
   "Source": "jokesandjokes",
   "BasePath": "_content/jokesandjokes",
   "Mode": "Default",
@@ -112,6 +112,25 @@
       "OriginalItemSpec": "wwwroot\\js\\attack.js"
     },
     {
+      "Identity": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\js\\homepagezoo.js",
+      "SourceId": "jokesandjokes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\",
+      "BasePath": "_content/jokesandjokes",
+      "RelativePath": "js/homepagezoo.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\homepagezoo.js"
+    },
+    {
       "Identity": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\js\\notes.txt",
       "SourceId": "jokesandjokes",
       "SourceType": "Discovered",
@@ -148,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\js\\testing.html",
+      "SourceId": "jokesandjokes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\",
+      "BasePath": "_content/jokesandjokes",
+      "RelativePath": "js/testing.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\testing.html"
     },
     {
       "Identity": "C:\\coding_projects\\TheDestroyerASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
