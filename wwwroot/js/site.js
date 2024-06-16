@@ -23,7 +23,8 @@ var beaminterval;
 
 
 function wave() {
-    var tentacleParts = $(".tentacleRoot .tentaclePart");
+    // select tentacleRoot that are not children that has the class monsterdead
+    var tentacleParts = $(".tentacleRoot .tentaclePart")
     for (let i = 0; i < tentacleParts.length; i++) {
         setTimeout(() => {
             // console.log(i);
@@ -72,12 +73,38 @@ function wave4() {
 
 }
 
+function wave5() {
+  var tentacleParts = $(".tentacleRootDead2 .tentaclePart, .tentacleRootDead .tentaclePart");
+  for (let i = 0; i < tentacleParts.length; i++) {
+    setTimeout(() => {
+      // console.log(i);
+      $(tentacleParts[i]).css("transform", "translate(-10%, 0%");
+    }, i * 55);
+  }
+}
+
+
+function wave7() {
+  var tentacleParts = $(".tentacleRootDead2 .tentaclePart, .tentacleRootDead .tentaclePart");
+  for (let i = 0; i < tentacleParts.length; i++) {
+    setTimeout(() => {  
+      // console.log(i);
+      $(tentacleParts[i]).css("transform", "translate(0%, 0%");
+    }, i * 55);
+  }
+}
+
+
 setInterval(() => {
     wave();
     wave3()
+    wave5()
+   
     setTimeout(() => {
         wave2()
         wave4()
+        wave7()
+     
 
     }, 200);
 

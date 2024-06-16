@@ -218,6 +218,17 @@ input[type=range].innerBlue, .outerBlue ::moz-range-thumb {
     display: flex;
 }
 
+.tentacleRootDead {
+    padding-top: 20%;
+    width: 20%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    background-image: radial-gradient(rgb(100,0,250) 30%, rgb(0,250,40));
+    border-radius: 50%;
+    display: flex;
+}
+
 .tentacleRoot2 {
     padding-top: 20%;
     width: 20%;
@@ -227,6 +238,16 @@ input[type=range].innerBlue, .outerBlue ::moz-range-thumb {
     background-image: radial-gradient(rgb(100,0,250) 30%, rgb(0,250,40));
     border-radius: 50%;
 }
+.tentacleRootDead2 {
+    padding-top: 20%;
+    width: 20%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    background-image: radial-gradient(rgb(100,0,250) 30%, rgb(0,250,40));
+    border-radius: 50%;
+}
+
 
 .tentacleRoot .tentaclePart {
     width: 80%;
@@ -251,7 +272,29 @@ input[type=range].innerBlue, .outerBlue ::moz-range-thumb {
     z-index: 1;
     margin: auto;
 }
+.tentacleRootDead .tentaclePart {
+    width: 80%;
+    height: 80%;
+    background-image: radial-gradient(rgb(100,0,250) 30%, rgb(0,250,40));
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: -1%;
+    z-index: 1;
+    margin: auto;
+}
 
+.tentacleRootDead2 .tentaclePart {
+    width: 80%;
+    height: 80%;
+    background-image: radial-gradient(rgb(100,0,250) 30%, rgb(0,250,40));
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    right: -1%;
+    z-index: 1;
+    margin: auto;
+}
 .monsterEyerow {
     width: 100%;
     display: flex;
@@ -268,6 +311,15 @@ input[type=range].innerBlue, .outerBlue ::moz-range-thumb {
     height: auto;
     border-radius: 50%;
     background-color: rgb(236, 217, 217);
+}
+.monsterDead .eye {
+    position: relative;
+    margin: auto;
+    padding-top: 10%;
+    width: 10%;
+    height: auto;
+    border-radius: 50%;
+    background-color: rgba(236, 217, 217, 0);
 }
 
 .iris {
@@ -349,6 +401,47 @@ input[type=range].innerBlue, .outerBlue ::moz-range-thumb {
     }
 }
 
+@keyframes floatMonsterDead {
+    0% {
+        transform: translateX(0px)translateY(0px)
+    }
+
+    12% {
+        transform: translateX(-5px)translateY(2px)
+    }
+
+    25% {
+        transform: translateX(-10px)translateY(5px)
+    }
+
+    37% {
+        transform: translateX(-15px)translateY(2px)
+    }
+
+    50% {
+        transform: translateX(-20px)translateY(0px)
+    }
+
+    67% {
+        transform: translateX(-15px)translateY(2px)
+    }
+
+    75% {
+        transform: translateX(-10px)translateY(5px)
+    }
+
+    90% {
+        transform: translateX(-5px)translateY(2px)
+    }
+
+    100% {
+        transform: translateX(0px)translateY(0px)
+    }
+}
+.monsterDead{
+    /* position:relative ! important; */
+    animation:floatMonsterDead 3s infinite ! important;
+}
 .monsterNameDisplay {
     display: flex;
     align-content: center;
