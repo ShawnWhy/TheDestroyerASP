@@ -5,6 +5,7 @@ html {
 @media (min-width: 768px) {
   html {
     font-size: 16px;
+    color:aliceblue;
   }
 }
 
@@ -19,6 +20,8 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: black;
+  color:aliceblue;
 }
 
 /* body{
@@ -453,6 +456,7 @@ input[type=range].innerBlue, .outerBlue ::moz-range-thumb {
     margin-bottom:1%;
     border-radius: 5px;
     background-color: white;
+    color:dimgray
 }
 
 .nameLetter {
@@ -675,6 +679,9 @@ footer {
 .container{
     margin:0 !important;
     padding: 0 !important;
+    width: 100% ! important;
+    max-width: unset;
+
 }
 .plane{
     position:absolute;
@@ -863,6 +870,7 @@ footer {
     font-size: 50px;
     font-weight: bolder;
     color: white;
+    z-index:5;
 
 }
 
@@ -875,6 +883,7 @@ footer {
     top: 0%;
     left: 15%;
     font-weight: bolder;
+    color:rgb(0, 0, 0);  
 }
 
 /* .tentackleRoot2> .tentaclePart{

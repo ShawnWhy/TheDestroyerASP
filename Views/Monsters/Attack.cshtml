@@ -3,14 +3,12 @@
 @{
     ViewData["Title"] = "Details";
 }
-
-<h1>Planet Health</h1>
-<h1 class="planethealth">100</h1>
-<h1>Creature Health</h1>
-
-
-<h1 class="creaturehealth" data ="@Model.Id">100</h1>
-
+<div class="healthDisplay" style="width:100%; display:flex; position:absolute; z-index:5">
+<h1 style="margin-left:20px">Planet Health</h1>
+<h1 style="margin-left:20px" class="planethealth">100</h1>
+<h1 style="margin-left:20px">Creature Health</h1>
+<h1 class="creaturehealth" data ="@Model.Id" style="margin-left:20px">100</h1>
+</div>
 <div class="battlePage"></div>
 
     <h4>Monster</h4>

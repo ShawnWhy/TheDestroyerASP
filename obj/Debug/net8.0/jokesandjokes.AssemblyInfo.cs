@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("jokesandjokes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5136472c43877d0c64e6b07616830dfc9bd6276")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae01c069192815752b19e4a9911892e8351d8636")]
 [assembly: System.Reflection.AssemblyProductAttribute("jokesandjokes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("jokesandjokes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

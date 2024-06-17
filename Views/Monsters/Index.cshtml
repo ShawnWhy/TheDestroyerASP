@@ -10,19 +10,24 @@
         margin-bottom:4%;
         float:left;
         overflow:visible;
+        margin:20px;
 
+    }
+
+    .monsterNameDisplay{
+      background:black;
     }
 
 
 </style>
-<h1>Index</h1>
+<h1>THIS IS YOUR LAB</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<!-- <div class="table"> -->
    
-    <tbody>
+
 @foreach (var item in Model) {   
 string cssClassMonsterDisplay = item.Id % 2 == 0 ? "monsterDisplay" : "monsterDisplay monsterDisplayOdd";
 
@@ -40,14 +45,19 @@ string cssClassMonsterDisplay = item.Id % 2 == 0 ? "monsterDisplay" : "monsterDi
 
          @for (int i = 0; i < item.EyeNumber; i++)
           {
-            <div class="eye">
+            
+            
             @if(item.alive == false){
+              <div class="eye" style="background-color:unset">
               <div class="deadEye">X</div>
+              </div>
             }
             else{
+            <div class="eye">
             <div class="iris"></div>
-            }
             </div>
+            }
+           
 
           }           
           
@@ -240,6 +250,6 @@ string cssClassMonsterDisplay = item.Id % 2 == 0 ? "monsterDisplay" : "monsterDi
 
 
 }
-    </tbody>
-</table>
+   
+<!-- </div> -->
 

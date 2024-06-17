@@ -171,7 +171,7 @@ function moveMissile(){
           clearInterval(movemissleInterval);
           clearInterval(createPlaneInterval);
           $(".missile").remove();
-          $(".battlePage").append(
+          $(".healthDisplay").html(
             "<h1 class='endgame'>Monster is Destroyed in this Universe</h1>"
           );
 
@@ -311,7 +311,7 @@ function addReduceHealth(){
     clearInterval(movemissleInterval);
     clearInterval(createPlaneInterval);
     $(".missile").remove();
-    $(".battlePage").append("<h1 class='endgame'>Earth is Destroyed in this Universe</h1>");
+    $(".healthDisplay").html("<h1 class='endgame'>Earth is Destroyed in this Universe</h1>");
     
 }
 }
@@ -329,7 +329,7 @@ function addReduceHealthMonster() {
   displayText.addClass("displayText");
   displayText.css("color", "red");
   displayText.css("position", "absolute");
-  health.text(healthVal - 50);
+  health.text(healthVal - 10);
 
   displayText.text("-10");
 
@@ -384,7 +384,9 @@ $('body').on("click",".plane", (e)=>{
 e.stopPropagation();
 e.preventDefault();
 
+if($(e.target).hasClass("plane")){
 planeExplode($(e.target));
+}
 })
 
 $("body").on("click", ".missile", (e) => {

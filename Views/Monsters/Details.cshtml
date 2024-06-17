@@ -28,15 +28,19 @@
 
                         @for (int i = 0; i < @Model.EyeNumber; i++)
                         {
-                <div class="eye">
+               
                    @if(@Model.alive == false){
+                     <div class="eye" style="background-color:unset">
               <div class="deadEye" style="font-size:unset ! important">X</div>
+            </div>
             }
             else{
+              <div class="eye">
             <div class="iris"></div>
+            </div>
             }
                 
-                </div>
+               
 
                         }
 
